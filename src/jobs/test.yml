@@ -1,3 +1,4 @@
+version: 2.1
 description: >
   Run a k6 test
 docker:
@@ -29,7 +30,7 @@ parameters:
     description: >
       The name of the environment variable containing the token used for accessing the
       k6 cloud. You can find yours at https://app.k6.io/account/api-token.
-    type: env_var_name
+    type: string
     default: K6_CLOUD_TOKEN
 steps:
   - checkout
