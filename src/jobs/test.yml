@@ -1,4 +1,3 @@
-version: 2.1
 description: >
   Run a k6 test
 docker:
@@ -41,8 +40,6 @@ steps:
             name: Execute cloud test
             command: >
               k6 cloud << parameters.script >> << parameters.arguments >>
-            environment:
-              K6_CLOUD_TOKEN: << parameters.token >>
   - unless:
       condition: << parameters.cloud >>
       steps:
